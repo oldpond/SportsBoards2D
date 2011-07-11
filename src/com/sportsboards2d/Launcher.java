@@ -2,7 +2,10 @@ package com.sportsboards2d;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,7 +20,7 @@ import android.widget.TextView;
  */
 
 public class Launcher extends ListActivity{
-	
+	String version;
 	private LauncherMenuAdapter mListAdapter;
 	
 	@Override
@@ -27,11 +30,15 @@ public class Launcher extends ListActivity{
 
 		 mListAdapter = new LauncherMenuAdapter(this); 
 		 this.setListAdapter(mListAdapter);
-		 //requests an ad. This ad will be put at the bottom of the launcher screen
+		 try {
+			    PackageInfo pInfo=getPackageManager().getPackageInfo(getPackageName(), 0);
+			    version = pInfo.versionName;
+			} catch (NameNotFoundException e) {
+			    //Handle exception
+			}
+		 
 		 final TextView txtVersion = (TextView)findViewById(R.id.text_version);
-		 txtVersion.setText(R.string.app_version);
-		 //final AdView adView = (AdView)findViewById(R.id.adView);
-		 //adView.loadAd(new AdRequest());
+		 txtVersion.setText(version);
 	}
 	
 	@Override
