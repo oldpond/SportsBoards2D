@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.util.*;
 
 
 /**
@@ -38,6 +39,8 @@ public class CreatePlayer extends Activity implements OnItemSelectedListener{
 	private boolean validLastName = false;
 	private boolean validJerseyNumber = false;
 	private boolean validPosition = false;
+	
+	private static final String TAG = "CreatePlayer";
 	
 	
 	@Override
@@ -62,6 +65,8 @@ public class CreatePlayer extends Activity implements OnItemSelectedListener{
         			 boolean result = v.getText().toString().matches(getString(R.string.regex_first_name));
         			 System.out.println(v.getText());
         			 System.out.println(result);
+        			 Log.v(TAG, "text=" + v.getText());
+        			 Log.v(TAG, "result=" + result);
         			 
         			 if(result){
         				 validFirstName = true;
