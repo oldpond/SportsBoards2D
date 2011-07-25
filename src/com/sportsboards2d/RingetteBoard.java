@@ -25,6 +25,7 @@ public class RingetteBoard extends BaseBoard{
 		arrayID = R.array.hockey_positions;
 		SPORT_NAME = getString(R.string.ringette_string);
 		BALL_PATH_SMALL = "ring32.png";
+		REF_PATH_SMALL = "referee_32.png";
 		return super.onLoadEngine();
 	}
 	@Override

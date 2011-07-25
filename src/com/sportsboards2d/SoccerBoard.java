@@ -26,6 +26,7 @@ public class SoccerBoard extends BaseBoard{
 		arrayID = R.array.soccer_positions;
 		SPORT_NAME = getString(R.string.soccer_string);
 		BALL_PATH_SMALL = "Soccer_Ball_32.png";
+		REF_PATH_SMALL = "referee_32.png";
 		return super.onLoadEngine();
 	}
 	

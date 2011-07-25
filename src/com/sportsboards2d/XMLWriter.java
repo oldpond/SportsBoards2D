@@ -41,13 +41,19 @@ public class XMLWriter{
 	    		name = fn.getfName();
 		    	serializer.startTag("", "form");
 		    	serializer.startTag("", "name");
-		    	serializer.text(fn.getfName());
-		    	
+		    	serializer.text(fn.getfName());		    	
 		    	serializer.endTag("", "name");
+		    	
 		    	serializer.startTag("", "ball");
 		    	serializer.attribute("", "x", String.valueOf(fn.getBall().getX()));
 		    	serializer.attribute("", "y", String.valueOf(fn.getBall().getY()));
 		    	serializer.endTag("", "ball");
+		    	
+		    	serializer.startTag("", "ref");
+		    	serializer.attribute("", "x", String.valueOf(fn.getRef().getX()));
+		    	serializer.attribute("", "y", String.valueOf(fn.getRef().getY()));
+		    	serializer.endTag("", "ref");
+		    	
 		    	for(PlayerObject pInfo:fn.getPlayers()){
 		    		
 		    		

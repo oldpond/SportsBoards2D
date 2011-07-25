@@ -98,8 +98,8 @@ public class XMLAccess{
 			players = reader.parsePlayers(input);
 			input.close();
 		}
-		catch(IOException oshit){
-			oshit.printStackTrace();
+		catch(IOException e){
+			e.printStackTrace();
 			input = null;
 		}
 		
@@ -111,8 +111,8 @@ public class XMLAccess{
 				input.close();
 				writePlayers(context, players, path);
 			}
-			catch(IOException oshit){
-				oshit.printStackTrace();
+			catch(IOException e){
+				e.printStackTrace();
 			}
 		}
 		return players;

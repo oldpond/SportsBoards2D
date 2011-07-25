@@ -25,6 +25,7 @@ public class HockeyBoard extends BaseBoard {
 		arrayID = R.array.hockey_positions;
 		SPORT_NAME = getString(R.string.hockey_string);
 		BALL_PATH_SMALL = "puck32.png";
+		REF_PATH_SMALL = "referee_32.png";
 		return super.onLoadEngine();
 	}
 	@Override

@@ -56,11 +56,12 @@ public abstract class Interface extends LayoutGameActivity implements IOnMenuIte
 	
 	protected static final int BACKGROUND_LAYER = 0;
 	protected static final int BALL_LAYER = 2;
+	protected static final int REF_LAYER = 3;
 	protected static final int PLAYER_LAYER = 1;
-	protected static final int LINE_LAYER = 3;
-	protected static final int MENU_BORDER_LAYER = 4;
-	protected static final int MENU_LAYER = 5;
-	protected static final int BUTTON_LAYER = 6;
+	protected static final int LINE_LAYER = 4;
+	protected static final int MENU_BORDER_LAYER = 5;
+	protected static final int MENU_LAYER = 6;
+	protected static final int BUTTON_LAYER = 7;
 
 	
 	protected static final FixtureDef FIXTURE_DEF = PhysicsFactory.createFixtureDef(1, 1.0f, 1.0f);
@@ -484,11 +485,13 @@ public abstract class Interface extends LayoutGameActivity implements IOnMenuIte
 				/* Remove the menu and reset it. */
 				this.mMainMenu.back();
 				this.mMainScene.getChild(BALL_LAYER).getChild(0).setVisible(true);
+				this.mMainScene.getChild(REF_LAYER).getChild(0).setVisible(true);
 
 			} 
 			else {
 				this.mMainScene.setChildScene(this.mMainMenu, false, true, true);
 				this.mMainScene.getChild(BALL_LAYER).getChild(0).setVisible(false);
+				this.mMainScene.getChild(REF_LAYER).getChild(0).setVisible(false);
 
 			}
 			return true;

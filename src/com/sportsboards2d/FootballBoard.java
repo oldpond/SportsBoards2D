@@ -24,6 +24,7 @@ public class FootballBoard extends BaseBoard {
 	public Engine onLoadEngine() {
 		SPORT_NAME = getString(R.string.football_string);
 		BALL_PATH_SMALL = "football.png";
+		REF_PATH_SMALL = "referee_32.png";
 		return super.onLoadEngine();
 	}
 	@Override

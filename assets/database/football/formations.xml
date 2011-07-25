@@ -3,6 +3,7 @@
 	<form>
 		<name>DEFAULT</name>
 		<ball x="488" y="276" />
+		<ref x="488" y="150" />
 		<pEntry>
 			<pID id="0" />
 			<team>RED</team>

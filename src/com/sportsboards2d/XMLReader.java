@@ -31,7 +31,7 @@ public class XMLReader extends BaseFeedParser{
 		
 		String formName = "", pTeam = "";
 		int pID = 0;
-		float xBall = 0.0f, yBall = 0.0f, xPlayer = 0.0f, yPlayer = 0.0f;
+		float xBall = 0.0f, yBall = 0.0f, xPlayer = 0.0f, yPlayer = 0.0f, xRef = 0.0f, yRef = 0.0f;
 		
 		XmlPullParser parser = Xml.newPullParser();
 		
@@ -63,6 +63,10 @@ public class XMLReader extends BaseFeedParser{
                         	xBall = Float.parseFloat(parser.getAttributeValue(0));
                         	yBall = Float.parseFloat(parser.getAttributeValue(1));
                         }
+                        else if (name.equalsIgnoreCase(REF)){                           	
+                        	xRef = Float.parseFloat(parser.getAttributeValue(0));
+                        	yRef = Float.parseFloat(parser.getAttributeValue(1));
+                        }
                         
                         else if (name.equalsIgnoreCase(PID)){
                         	pID = Integer.parseInt(parser.getAttributeValue(0));
@@ -83,7 +87,7 @@ public class XMLReader extends BaseFeedParser{
                         
                         if (name.equalsIgnoreCase(FORM)){
                         	
-                        	fEntry = new FormationObject(formName, new Coordinates(xBall, yBall), players);
+                        	fEntry = new FormationObject(formName, new Coordinates(xBall, yBall), new Coordinates(xRef, yRef), players);
                         	entries.add(fEntry);
                             System.out.println(fEntry.getPlayers().size() + " players in this formation");
 

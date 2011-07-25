@@ -17,6 +17,7 @@ public abstract class BaseFeedParser implements FeedParser{
 	static final String FORM = "form";
 	static final String FNAME = "name";
 	static final String BALL = "ball";
+	static final String REF = "ref";
 	static final String PENTRY = "pEntry";
 	
 	static final String PID = "pID";
