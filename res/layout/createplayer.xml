@@ -8,6 +8,14 @@
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:orientation="vertical">
+			
+			<TextView android:id="@+id/spinner_text"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_below="@+id/playernum_edit" android:text="@string/position_prompt" />
+
+			<Spinner android:id="@+id/spinner" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_below="@+id/spinner_text"
+				android:prompt="@string/position_prompt" />
 
 			<TextView android:id="@+id/playername_first_view"
 				android:layout_height="wrap_content" 
@@ -20,7 +28,9 @@
 				android:layout_width="fill_parent"
 				android:layout_below="@+id/playername_first_view"
 				android:scrollHorizontally="true" 
-				android:imeOptions="actionDone" 
+				android:imeOptions="actionNext" 
+				android:autoText="false"
+		        android:capitalize="characters"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:inputType="textCapWords" />
 
@@ -36,7 +46,7 @@
 				android:layout_width="fill_parent"
 				android:layout_below="@+id/playername_last_view"
 				android:scrollHorizontally="true" 
-				android:imeOptions="actionDone" 
+				android:imeOptions="actionNext" 
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:inputType="textCapWords" />
 
@@ -58,13 +68,7 @@
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:inputType="number" />
 
-			<TextView android:id="@+id/spinner_text"
-				android:layout_width="fill_parent" android:layout_height="wrap_content"
-				android:layout_below="@+id/playernum_edit" android:text="@string/position_prompt" />
-
-			<Spinner android:id="@+id/spinner" android:layout_width="fill_parent"
-				android:layout_height="wrap_content" android:layout_below="@+id/spinner_text"
-				android:prompt="@string/position_prompt" />
+			
 
 			<LinearLayout
 			android:layout_width="fill_parent"
@@ -78,7 +82,7 @@
 				android:layout_below="@+id/spinner"
 				android:layout_alignParentLeft="true"
 				android:text="OK"
-				android:onClick="okClicked"
+				android:onClick="onClick"
 				android:layout_weight="1" />
 
 			<Button 

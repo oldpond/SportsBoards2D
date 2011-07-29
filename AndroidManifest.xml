@@ -9,7 +9,7 @@
 <uses-sdk android:targetSdkVersion="8" android:minSdkVersion="8"></uses-sdk>
 
 
-    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">
         <activity android:label="@string/app_name" android:screenOrientation="landscape" android:name="Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
@@ -24,7 +24,7 @@
         <activity android:screenOrientation="landscape" android:name="SaveForm"></activity>
         <activity android:screenOrientation="landscape" android:name="DeleteForm"></activity>
         <activity android:screenOrientation="landscape" android:name="LoadForm"></activity>
-        <activity android:screenOrientation="landscape" android:name="CreatePlayer"></activity>
+        <activity android:screenOrientation="landscape" android:name="CreatePlayer" android:windowSoftInputMode="stateVisible|adjustResize"></activity>
         <activity android:screenOrientation="landscape" android:name="ViewPlayers"></activity>
         <activity android:screenOrientation="landscape" android:name="SettingsViewer"></activity>
         <activity android:screenOrientation="landscape" android:name="SelectPlayer"></activity>

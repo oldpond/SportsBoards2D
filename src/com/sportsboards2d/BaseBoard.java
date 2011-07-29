@@ -34,6 +34,7 @@ import org.anddev.andengine.util.MathUtils;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.badlogic.gdx.math.Vector2;
@@ -99,6 +100,8 @@ public abstract class BaseBoard extends Interface {
 	private List<SpritePath> pathList = new ArrayList<SpritePath>();
 	private List<Coordinates> path = new ArrayList<Coordinates>();
 	private Line left, right;
+	
+	private static final String TAG = "BaseBoard";
 
 	// ===========================================================
 	// Methods for/from SuperClass/Interfaces
@@ -867,6 +870,8 @@ public abstract class BaseBoard extends Interface {
 	protected void onActivityResult(int requestCode, int receiveCode,
 			Intent intent) {
 
+		//super.onActivityResult(requestCode, resultCode, data);
+		
 		List<PlayerObject> playerList = new ArrayList<PlayerObject>();
 		System.out.println("Receive code: " + receiveCode);
 		FormationObject fn = null;
@@ -944,6 +949,7 @@ public abstract class BaseBoard extends Interface {
 		}
 		// create a new player
 		else if (requestCode == 5 && receiveCode == 5) {
+			Log.v(TAG, "We are receiving results from create player.");
 			PlayerInfo newPlayer = (PlayerInfo) intent
 					.getParcelableExtra(getString(R.string.players_create));
 			StringPrinting.printPlayerInfo(newPlayer);

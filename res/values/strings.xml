@@ -140,7 +140,7 @@
 	
 	<!-- Regex -->
 	<string name="regex_first_name">"[A-Z][a-zA-Z]*"</string>
-	<string name="regex_last_name">"[A-Z][a-zA-z]+([ '-][A-Z][a-zA-Z]+)*"</string>
+	<string name="regex_last_name">"[a-zA-z]+([ '-][A-Z][a-zA-Z]+)*"</string>
 	<string name="regex_jerseynum">"[1-9]?[0-9]"</string>
 	<string name="regex_position">"[A-Z][A-Z]?[A-Z]?"</string>
     <string name="dont_allow">Don\'t allow the user access</string>
