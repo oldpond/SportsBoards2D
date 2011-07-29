@@ -3,6 +3,8 @@ package com.sportsboards2d;
 import org.anddev.andengine.entity.text.ChangeableText;
 import org.anddev.andengine.opengl.texture.region.TiledTextureRegion;
 
+import android.util.Log;
+
 /**
  * Coded by Nathan King
  */
@@ -12,6 +14,8 @@ import org.anddev.andengine.opengl.texture.region.TiledTextureRegion;
  */
 
 public class PlayerSprite extends BaseSprite{
+	
+	private static final String TAG = "PlayerSprite";
 	
 	private final int NAME_DISPLAY = 0;
 	private final int POSITION_DISPLAY = 1;
@@ -56,9 +60,6 @@ public class PlayerSprite extends BaseSprite{
 		
 		player.setpInfo(swap);
 		player.setpID(swap.getpID());
-		
-		System.out.println(swap.getpID());
-		System.out.println(player.getpID());
 		
 		getNameDisplay().setText(player.getpInfo().getInitials());
 		getPositionDisplay().setText(player.getpInfo().getType());

@@ -5,6 +5,7 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.PreferenceActivity;
+import android.util.Log;
 
 /**
  * Coded by Nathan King
@@ -14,6 +15,8 @@ import android.preference.PreferenceActivity;
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.
  */
 public class SettingsViewer extends PreferenceActivity implements OnSharedPreferenceChangeListener{
+	
+	private static final String TAG = "SettingsViewer";
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +61,7 @@ public class SettingsViewer extends PreferenceActivity implements OnSharedPrefer
 			editor.putInt(key, result);
 		}
 		else if(key.equals(getString(R.string.largePlayers))){
-			System.out.println("here");
+			Log.d(TAG, "at largePlayers");
 			int result = Integer.parseInt(sharedPreferences.getString(key, "1"));
 			editor.putInt(key, result);
 		}

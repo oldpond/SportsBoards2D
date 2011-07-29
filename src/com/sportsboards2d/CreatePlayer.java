@@ -176,8 +176,9 @@ public class CreatePlayer extends Activity implements OnItemSelectedListener {
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int pos,
 			long id) {
+		//TODO What's going on here?
 		validPosition = true;
-		System.out.println(parent.getItemAtPosition(pos).toString());
+		Log.d(TAG, parent.getItemAtPosition(pos).toString());
 	}
 
 	@Override

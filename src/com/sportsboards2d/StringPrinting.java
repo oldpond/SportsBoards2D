@@ -2,6 +2,8 @@ package com.sportsboards2d;
 
 import java.util.List;
 
+import android.util.Log;
+
 /**
  * Coded by Nathan King
  */
@@ -11,20 +13,21 @@ import java.util.List;
  */
 public class StringPrinting {
 	
+	private static final String TAG = "StringPrinting";
+	
 	public static void printForm(FormationObject fn){
 		
-		System.out.println(fn.getfName());
-		System.out.println("Xball: " + fn.getBall().getX());
-		System.out.println("Yball: " + fn.getBall().getY());
+		Log.d(TAG, "Xball: " + fn.getBall().getX());
+		Log.d(TAG, "Yball: " + fn.getBall().getY());
+		Log.d(TAG, fn.getfName());
 		
 		List<PlayerObject>players = fn.getPlayers();
 		
 		//Player p 
 		
 		for(PlayerObject p:players){
-			System.out.println("ID: " + p.getpID());
-			System.out.println("Team: " + ((Player)p).getpTeam());
-			//System.out.println()
+			Log.d(TAG, "ID: " + p.getpID());
+			Log.d(TAG, "Team: " + ((Player)p).getpTeam());
 		}
 
 	}
@@ -32,24 +35,24 @@ public class StringPrinting {
 	public static void printAllFormation(List<FormationObject> forms){
 		
 		for(FormationObject fn:forms){
-			System.out.println(fn.getfName());
-			System.out.println(fn.getBall().getX() + " " + fn.getBall().getY());
+			Log.d(TAG, fn.getfName());
+			Log.d(TAG, fn.getBall().getX() + " " + fn.getBall().getY());
 			
 			for(PlayerObject p:fn.getPlayers()){
-				System.out.println(((Player) p).getX());
-				System.out.println(p.getpID());
+				Log.d(TAG, String.valueOf(((Player) p).getX()));
+				Log.d(TAG, String.valueOf(p.getpID()));
 			}
 			
-			System.out.println(fn.getPlayers().size());
+			Log.d(TAG, String.valueOf(fn.getPlayers().size()));
 		}
 	}
 	
 	public static void printPlayerInfo(PlayerInfo player){
 		
-		System.out.println("Player name: " + player.getPName());
-		System.out.println("Player ID: " + player.getpID());
-		System.out.println("Player jersey#: " + player.getjNum());
-		System.out.println("Player position: " + player.getType());
+		Log.d(TAG, "Player name: " + player.getPName());
+		Log.d(TAG, "Player ID: " + player.getpID());
+		Log.d(TAG, "Player jersey#: " + player.getjNum());
+		Log.d(TAG, "Player position: " + player.getType());
 	}
 
 }

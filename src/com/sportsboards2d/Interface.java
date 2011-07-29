@@ -29,6 +29,7 @@ import org.anddev.andengine.ui.activity.LayoutGameActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.KeyEvent;
 
 import com.badlogic.gdx.math.Vector2;
@@ -45,6 +46,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 
 public abstract class Interface extends LayoutGameActivity implements IOnMenuItemClickListener, IOnAreaTouchListener{
 	
+	private static final String TAG = "Interface";
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -257,7 +259,7 @@ public abstract class Interface extends LayoutGameActivity implements IOnMenuIte
 
 		//No preferences saved, (meaning first boot of the app)
 		if(default_board == null){
-			System.out.println("no prefs");
+			Log.d(TAG, "no prefs");
 			
 			SharedPreferences.Editor editor = settings.edit();
 			editor.putString("default_board", "basketball");

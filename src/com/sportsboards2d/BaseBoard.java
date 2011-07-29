@@ -420,7 +420,7 @@ public abstract class BaseBoard extends Interface {
 				switch (pMenuItem.getID()) {
 
 				case Constants.PMENU_VIEW:
-					System.out.println("here");
+					Log.d(TAG, "here");
 					Intent intent = new Intent(BaseBoard.this,
 							ViewPlayers.class);
 					intent.putExtra("player", p.getpInfo());
@@ -612,8 +612,8 @@ public abstract class BaseBoard extends Interface {
 				this.mMainScene.getChild(LINE_LAYER).attachChild(left);
 				this.mMainScene.getChild(LINE_LAYER).attachChild(right);
 
-				System.out.println("spriteX: " + sprite.getX());
-				System.out.println("spriteY: " + sprite.getY());
+				Log.d(TAG, "spriteY: " + sprite.getY());
+				Log.d(TAG, "spriteX: " + sprite.getX());
 
 				path.add(new Coordinates(sprite.getX(), sprite.getY()));
 				lines.add(left);
@@ -701,7 +701,7 @@ public abstract class BaseBoard extends Interface {
 							final PathModifier.Path path1 = new PathModifier.Path(
 									Xs, Ys);
 							pathList.add(new SpritePath(selectedPlayer, path1));
-							System.out.println("after record: " + Xs[0] + " "
+							Log.d(TAG, "after record: " + Xs[0] + " "
 									+ Ys[0]);
 							sprite.setPosition(Xs[0], Ys[0]);
 							Xs[0] = Xs[0] + PLAYER_OFFSET;
@@ -873,7 +873,7 @@ public abstract class BaseBoard extends Interface {
 		//super.onActivityResult(requestCode, resultCode, data);
 		
 		List<PlayerObject> playerList = new ArrayList<PlayerObject>();
-		System.out.println("Receive code: " + receiveCode);
+		Log.d(TAG, "Receive code: " + receiveCode);
 		FormationObject fn = null;
 		// save form activity
 
@@ -943,7 +943,7 @@ public abstract class BaseBoard extends Interface {
 				createPlayerContextMenu();
 			}
 			if (config.largePlayers != largePlayers) {
-				System.out.println("change");
+				Log.d(TAG, "change player size");
 				changePlayerSize();
 			}
 		}

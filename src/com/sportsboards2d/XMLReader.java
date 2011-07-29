@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.xmlpull.v1.XmlPullParser;
 
+import android.util.Log;
 import android.util.Xml;
 
 /**
@@ -17,6 +18,8 @@ import android.util.Xml;
  */
 
 public class XMLReader extends BaseFeedParser{
+	
+	private static final String TAG = "XMLReader";
 	
 	public XMLReader(){}
 	
@@ -89,7 +92,7 @@ public class XMLReader extends BaseFeedParser{
                         	
                         	fEntry = new FormationObject(formName, new Coordinates(xBall, yBall), new Coordinates(xRef, yRef), players);
                         	entries.add(fEntry);
-                            System.out.println(fEntry.getPlayers().size() + " players in this formation");
+                            Log.d(TAG, fEntry.getPlayers().size() + " players in this formation");
 
                         }
                         else if (name.equalsIgnoreCase(PENTRY)){
