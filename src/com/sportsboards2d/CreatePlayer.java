@@ -44,7 +44,7 @@ public class CreatePlayer extends Activity implements OnItemSelectedListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.createplayer);
+		setContentView(R.layout.newcreateplayer);
 				
 		textFirstName = (EditText) findViewById(R.id.playername_first_edit);
 		textLastName = (EditText) findViewById(R.id.playername_last_edit);

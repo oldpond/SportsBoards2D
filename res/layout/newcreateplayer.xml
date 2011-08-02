@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fillViewport="true">
+	
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="match_parent" 
+		android:layout_height="match_parent">
+		
+		<TextView android:layout_height="wrap_content" 
+			android:id="@+id/playername_first_view"
+			android:text="@string/enter_first_name" 
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"></TextView>
+			
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="match_parent" 
+			android:inputType="textCapWords"
+			android:id="@+id/playername_first_edit">
+			<requestFocus></requestFocus></EditText>
+			
+		<TextView android:layout_height="wrap_content" 
+		android:id="@+id/playername_last_view"
+			android:text="@string/enter_last_name" 
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"></TextView>
+			
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="match_parent" 
+			android:inputType="textCapWords"
+			android:id="@+id/playername_last_edit"></EditText>
+			
+		<TextView android:layout_height="wrap_content" 
+			android:id="@+id/playernum_view"
+			android:text="@string/enter_jersey" 
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"></TextView>
+			
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:inputType="number" 
+			android:id="@+id/playernum_edit"></EditText>
+			
+		<TextView android:layout_height="wrap_content" 
+			android:id="@+id/spinner_text"
+			android:text="@string/position_prompt" 
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"></TextView>
+			
+		<Spinner android:layout_height="wrap_content"
+			android:layout_width="match_parent" 
+			android:id="@+id/spinner"></Spinner>
+			
+		<Button android:text="OK" 
+			android:id="@+id/ok_button"
+			android:layout_width="wrap_content" 
+			android:onClick="okClicked"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"></Button>
+			
+		<Button android:text="Cancel" 
+			android:id="@+id/cancel_button"
+			android:layout_width="wrap_content" 
+			android:onClick="cancelClicked"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"></Button>
+	</LinearLayout>
+
+</ScrollView>

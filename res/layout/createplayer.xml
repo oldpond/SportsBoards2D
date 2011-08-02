@@ -10,11 +10,15 @@
 			android:orientation="vertical">
 			
 			<TextView android:id="@+id/spinner_text"
-				android:layout_width="fill_parent" android:layout_height="wrap_content"
-				android:layout_below="@+id/playernum_edit" android:text="@string/position_prompt" />
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/playernum_edit" 
+				android:text="@string/position_prompt" />
 
-			<Spinner android:id="@+id/spinner" android:layout_width="fill_parent"
-				android:layout_height="wrap_content" android:layout_below="@+id/spinner_text"
+			<Spinner android:id="@+id/spinner" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:layout_below="@+id/spinner_text"
 				android:prompt="@string/position_prompt" />
 
 			<TextView android:id="@+id/playername_first_view"
