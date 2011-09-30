@@ -24,6 +24,7 @@ import org.anddev.andengine.opengl.font.Font;
 import org.anddev.andengine.opengl.font.FontFactory;
 import org.anddev.andengine.opengl.texture.Texture;
 import org.anddev.andengine.opengl.texture.region.TextureRegionFactory;
+import org.anddev.andengine.ui.activity.BaseGameActivity;
 import org.anddev.andengine.ui.activity.LayoutGameActivity;
 
 import android.app.AlertDialog;
@@ -36,15 +37,13 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 
-/**
- * Coded by Nathan King
- */
+
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.
  */
 
-public abstract class Interface extends LayoutGameActivity implements IOnMenuItemClickListener, IOnAreaTouchListener{
+public abstract class Interface extends BaseGameActivity implements IOnMenuItemClickListener, IOnAreaTouchListener{
 	
 	private static final String TAG = "Interface";
 	// ===========================================================
@@ -106,14 +105,14 @@ public abstract class Interface extends LayoutGameActivity implements IOnMenuIte
 	
 	protected Configuration config;
 	
-	@Override
-	protected int getLayoutID(){
-		return R.layout.adlayout;
-	}
-	@Override
-	protected int getRenderSurfaceViewID() {
-		return R.id.adlayout_surfaceview;
-	}
+//	@Override
+//	protected int getLayoutID(){
+//		return R.layout.adlayout;
+//	}
+//	@Override
+//	protected int getRenderSurfaceViewID() {
+//		return R.id.adlayout_surfaceview;
+//	}
 	
 	/*
 	 * onLoadResources()

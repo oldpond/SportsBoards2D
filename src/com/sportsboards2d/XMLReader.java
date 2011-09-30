@@ -9,9 +9,6 @@ import org.xmlpull.v1.XmlPullParser;
 import android.util.Log;
 import android.util.Xml;
 
-/**
- * Coded by Nathan King
- */
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.

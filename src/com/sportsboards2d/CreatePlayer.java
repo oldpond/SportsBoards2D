@@ -18,9 +18,7 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.util.*;
 
-/**
- * Coded by Nathan King
- */
+
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.

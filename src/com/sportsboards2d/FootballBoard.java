@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.sportsboards2d;
 
 import org.anddev.andengine.engine.Engine;
@@ -11,9 +8,6 @@ import org.anddev.andengine.opengl.texture.region.TextureRegionFactory;
 
 import android.graphics.Color;
 
-/**
- * Coded by Nathan King
- */
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.

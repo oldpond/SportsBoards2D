@@ -14,9 +14,6 @@ import org.xmlpull.v1.XmlSerializer;
 import android.content.Context;
 import android.util.Xml;
 
-/**
- * Coded by Nathan King
- */
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.

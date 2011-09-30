@@ -4,9 +4,7 @@ import org.anddev.andengine.entity.scene.menu.item.IMenuItem;
 import org.anddev.andengine.entity.text.ChangeableText;
 import org.anddev.andengine.opengl.font.Font;
 
-/**
- * Coded by Nathan King
- */
+
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.

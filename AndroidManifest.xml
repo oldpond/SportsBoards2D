@@ -28,8 +28,6 @@
         <activity android:screenOrientation="landscape" android:name="ViewPlayers"></activity>
         <activity android:screenOrientation="landscape" android:name="SettingsViewer"></activity>
         <activity android:screenOrientation="landscape" android:name="SelectPlayer"></activity>
-		<activity android:name="com.google.ads.AdActivity"
-			android:configChanges="keyboard|keyboardHidden|orientation" />
 
     </application>
 </manifest>

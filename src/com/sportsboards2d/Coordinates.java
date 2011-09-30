@@ -1,8 +1,6 @@
 package com.sportsboards2d;
 
-/**
- * Coded by Nathan King
- */
+
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.

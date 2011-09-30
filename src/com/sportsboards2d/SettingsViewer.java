@@ -7,9 +7,6 @@ import android.preference.ListPreference;
 import android.preference.PreferenceActivity;
 import android.util.Log;
 
-/**
- * Coded by Nathan King
- */
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.

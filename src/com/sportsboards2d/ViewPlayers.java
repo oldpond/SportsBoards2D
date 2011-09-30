@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.sportsboards2d;
 
 import android.app.ListActivity;
@@ -11,9 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
-/**
- * Coded by Nathan King
- */
 
 /**
  * Copyright 2011 5807400 Manitoba Inc. All rights reserved.
